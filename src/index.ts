@@ -27,7 +27,6 @@ app.post('/tasks', (req: Request, res: Response) => {
 })
 app.delete('/tasks/:id', (req: Request, res: Response) => {
     const id = req.params.id
-
     const newTasks = tasks.filter((task) => task.id !== id)
     tasks = newTasks;
     res.send(tasks)
